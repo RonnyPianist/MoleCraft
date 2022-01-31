@@ -2,6 +2,7 @@ package de.ronnypianist;
 
 import de.ronnypianist.commands.*;
 import de.ronnypianist.listener.JoinListener;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
@@ -23,6 +24,7 @@ public class Main extends JavaPlugin {
         getCommand("cc").setExecutor(new ChatClearCommand());
 
         getServer().getPluginManager().registerEvents(new JoinListener(), this);
+        Bukkit.broadcastMessage("Hello");
     }
 
     public static Main getPlugin() {
