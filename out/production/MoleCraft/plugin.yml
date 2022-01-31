@@ -15,3 +15,5 @@ commands:
       description: Party!
    cc:
       description: Clear the Chat!
+   player:
+      description: List the OnlinePlayers
