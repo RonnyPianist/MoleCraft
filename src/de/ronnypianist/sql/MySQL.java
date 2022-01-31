@@ -18,17 +18,17 @@ public class MySQL {
     private Connection connection;
 
     public boolean isConnected(){
-        FileConfiguration cfg = Main.getPlugin().getConfig();
-        cfg.set("MySQL.host",host);
-        cfg.set("MySQL.host",port);
-        cfg.set("MySQL.host",database);
-        cfg.set("MySQL.host",username);
-        cfg.set("MySQL.host",password);
         return (connection == null ? false : true);
     }
 
     public void connect() throws ClassNotFoundException, SQLException {
         if (!isConnected()) {
+            FileConfiguration cfg = Main.getPlugin().getConfig();
+            cfg.set("MySQL.host",host);
+            cfg.set("MySQL.host",port);
+            cfg.set("MySQL.host",database);
+            cfg.set("MySQL.host",username);
+            cfg.set("MySQL.host",password);
             connection = DriverManager.getConnection("jdbc:mysql://" +
                             host + ":" + port + "/" + database + "?useSSL=false",
                     username, password);
