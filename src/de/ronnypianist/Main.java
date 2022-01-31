@@ -1,8 +1,8 @@
 package de.ronnypianist;
 
 import de.ronnypianist.commands.*;
-import de.ronnypianist.listener.JoinListener;
 import de.ronnypianist.sql.MySQL;
+import de.ronnypianist.listener.JoinListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -37,6 +37,11 @@ public class Main extends JavaPlugin {
         getCommand("player").setExecutor(new PlayerCommand());
 
         getServer().getPluginManager().registerEvents(new JoinListener(), this);
+    }
+
+    @Override
+    public void onDisable() {
+        SQL.disconnect();
     }
 
     public static Main getPlugin() {
