@@ -1,0 +1,13 @@
+Spawn:
+  World: world
+  X: -92.29660008471889
+  Y: 64.0
+  Z: -164.99550432719818
+  Yaw: -78.535034
+  Pitch: 13.395944
+MySQL:
+  host: localhost
+  port: 3306
+  database: molecraft
+  username: molecraft
+  password: Ronny331
