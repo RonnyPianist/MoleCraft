@@ -15,7 +15,6 @@ public class Main extends JavaPlugin {
 
         System.out.println("Plugins wurde aktiviert!");
 
-        getCommand("heal").setExecutor(new HealCommand());
         getCommand("kit").setExecutor(new KitCommand());
         getCommand("setspawn").setExecutor(new SetSpawnCommand());
         getCommand("spawn").setExecutor(new SpawnCommand());
